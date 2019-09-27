@@ -1,0 +1,28 @@
+<p>updateproduct works!</p>
+
+
+
+<form (ngSubmit)="updateproduct()" name="updateForm">
+        <div class="form-group">
+            <label class="form-text">Product Name</label>
+            <input type="text" value="{{productdetails[0].productName}}" [(ngModel)]="productName" name="productName" class="form-control">
+            <br>
+            <label class="form-text">Product Price</label>
+            <input type="text" value="{{productdetails[0].productPrice}}" [(ngModel)]="productPrice" name="productPrice" class="form-control">
+            <br>
+            <label class="form-text">Product Image</label>
+            <input type="file" [(ngModel)]="productImage" 
+            name="productImage" class="form-control" ng2FileSelect [uploader]="uploader">
+            <br>
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <br>
+                    <button class="btn btn-success" type="submit">UPDATE</button>
+                </div>
+                <div class="col-4"></div>
+            </div>
+    
+        </div>
+    </form>
+    
