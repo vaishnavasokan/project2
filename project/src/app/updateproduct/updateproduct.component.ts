@@ -16,7 +16,7 @@ productImage;
 
 updatedetails;
 
-  constructor(private ar:ActivatedRoute, private ss:SampleService) { }
+  constructor(private rt:Router,private ar:ActivatedRoute, private ss:SampleService) { }
 
   ngOnInit() {
     this.id=this.ar.snapshot.paramMap.get("id")
@@ -38,10 +38,11 @@ updatedetails;
 
 updateproduct(id)
   {
-      console.log("update cheyendath", id)
-      this.ss.updatedata(id).subscribe(data=>{
-        this.updatedetails=data;
+      //console.log("update cheyendath", id)
+      this.ss.updatedata(id,this.productName,this.productPrice).subscribe(data=>{
+        alert(JSON.parse(JSON.stringify(data)).msg);
 
   })
+  this.rt.navigateByUrl("/viewproducts")
 }
 }

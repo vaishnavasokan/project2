@@ -50,8 +50,9 @@ router.post("/signup",function(req,res)
         if(err) throw err;
         else
         {
-            console.log("User Added.");
-            res.redirect('/')
+            //console.log("User Added.");
+            res.send({ msg: "User Added." })
+            //res.redirect('/')
         }
         
     })
@@ -60,7 +61,7 @@ router.post("/signup",function(req,res)
 
 router.post("/login",function(req,res)
   {
-    console.log("varunna data",req.body);
+    //console.log("varunna data",req.body);
     users.find({username:req.body.username,
         password:req.body.password},function(err,result)
     {

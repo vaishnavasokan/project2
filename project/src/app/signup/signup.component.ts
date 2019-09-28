@@ -37,7 +37,7 @@ export class SignupComponent implements OnInit {
     console.log("ts file",this.registerForm.value)
 
     this.ss.adduser(this.registerForm.value).subscribe(data => {
-      this.userdetails = data;
+      alert(JSON.parse(JSON.stringify(data)).msg);
     })
   }
 }

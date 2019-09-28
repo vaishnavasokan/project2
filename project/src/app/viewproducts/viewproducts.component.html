@@ -8,17 +8,17 @@
           <form>
             <br>
             
-            <div class="card" style="width: 350px">
+            <div class="card" style="width: 350px; height: 500px;">
               <p style="text-align: center">
                 <img class="rounded-circle" src="http://localhost:3000/products/view/{{i.productImage}}" height="200px" width="200px">
               </p>
               <h2 class="card-title text-center" style="font-family: Cambria ">{{i.productName}}</h2>
               <div class="card-body">
-                <h4 class="card-text text-center" style="font-family: Cambria">{{i.productPrice}} </h4>
-                <h5 class="card-text text-center" style="font-family: Cambria">abc </h5>
+                <h4 class="card-text text-center" style="font-family: Cambria">{{i.productPrice}} ₹ </h4>
+                <h5 class="card-text text-center" style="font-family: Cambria"> </h5>
                 <!-- <h6 class="card-text text-center"style="font-family: Cambria">price : ₹ </h6> -->
-                <h4 class="card-text text-center" style="font-family: Cambria bold">star</h4>
-                <h5 class="card-text text-center" style="font-family: Cambria bold">hhh</h5>
+                <h4 class="card-text text-center" style="font-family: Cambria bold">10% off</h4>
+                <h5 class="card-text text-center" style="font-family: Cambria bold"></h5>
                 <a class="text-left btn btn-success" (click)="editproduct(i._id)">Edit</a>
                 <input type="button" value="Delete" style="float: right;" class="btn btn-success" (click)="deleteitem(i._id)">
               </div>

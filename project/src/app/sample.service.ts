@@ -38,11 +38,11 @@ export class SampleService {
     return this.http.get(url);
   }
 
-  updatedata(id)
+  updatedata(id,b,c)
   {
     console.log("update service",id)
     let url="http://localhost:3000/products/updatedata/"+id;
-    return this.http.get(url)
+    return this.http.post(url,{productName:b,productPrice:c})
   }
   
 }

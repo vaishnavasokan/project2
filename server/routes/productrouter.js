@@ -112,10 +112,11 @@ router.get("/viewdata/:id",function(req,res)
   
 })
 
-router.get("/updatedata/:id",function(req,res)
+router.post("/updatedata/:id",function(req,res)
 {
   var id=req.params.id;
   console.log("routeril:",id)
+  console.log(req.body)
   product.updateOne({_id:id},{$set:{productName:req.body.productName,
                   productPrice:req.body.productPrice}},(err,result)=>
       {
