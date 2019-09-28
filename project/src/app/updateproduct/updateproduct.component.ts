@@ -14,6 +14,8 @@ productName;
 productPrice;
 productImage;
 
+updatedetails;
+
   constructor(private ar:ActivatedRoute, private ss:SampleService) { }
 
   ngOnInit() {
@@ -36,6 +38,10 @@ productImage;
 
 updateproduct(id)
   {
-      //console.log()
-  }
+      console.log("update cheyendath", id)
+      this.ss.updatedata(id).subscribe(data=>{
+        this.updatedetails=data;
+
+  })
+}
 }

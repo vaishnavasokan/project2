@@ -112,8 +112,12 @@ router.get("/viewdata/:id",function(req,res)
   
 })
 
-router.post("/updatedata",upload,(req,res)=>{
-  book.updateOne({},{$set:{}},(err,result)=>
+router.get("/updatedata/:id",function(req,res)
+{
+  var id=req.params.id;
+  console.log("routeril:",id)
+  product.updateOne({_id:id},{$set:{productName:req.body.productName,
+                  productPrice:req.body.productPrice}},(err,result)=>
       {
           if (err) throw err;
           else
@@ -121,6 +125,6 @@ router.post("/updatedata",upload,(req,res)=>{
               res.send({ msg: "Product Updated." })
           }
       })
-  })
+})
 
 module.exports = router;

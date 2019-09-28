@@ -37,6 +37,13 @@ export class SampleService {
     let url="http://localhost:3000/products/viewdata/"+id;
     return this.http.get(url);
   }
+
+  updatedata(id)
+  {
+    console.log("update service",id)
+    let url="http://localhost:3000/products/updatedata/"+id;
+    return this.http.get(url)
+  }
   
 }
 
