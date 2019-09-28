@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {SampleService} from '../sample.service'
+import {Router} from '@angular/router'
 
 
 @Component({
@@ -13,7 +14,8 @@ export class SignupComponent implements OnInit {
   registerForm: FormGroup;
   userdetails;
 
-  constructor(private fb: FormBuilder, private ss :SampleService) { }
+  constructor(private fb: FormBuilder, private ss :SampleService,
+    private rt:Router) { }
 
   ngOnInit() {
 
@@ -39,5 +41,6 @@ export class SignupComponent implements OnInit {
     this.ss.adduser(this.registerForm.value).subscribe(data => {
       alert(JSON.parse(JSON.stringify(data)).msg);
     })
+    this.rt.navigateByUrl("")
   }
 }
