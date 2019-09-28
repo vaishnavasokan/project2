@@ -31,8 +31,11 @@ productImage;
       // this.productImage=this.productdetails.productImage;
   
   })
- 
-  
-
 }
+
+
+updateproduct(id)
+  {
+      //console.log()
+  }
 }

@@ -112,4 +112,15 @@ router.get("/viewdata/:id",function(req,res)
   
 })
 
+router.post("/updatedata",upload,(req,res)=>{
+  book.updateOne({},{$set:{}},(err,result)=>
+      {
+          if (err) throw err;
+          else
+          {
+              res.send({ msg: "Product Updated." })
+          }
+      })
+  })
+
 module.exports = router;

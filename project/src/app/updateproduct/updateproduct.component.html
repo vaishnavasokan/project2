@@ -1,8 +1,9 @@
-<p>updateproduct works!</p>
 
+<app-header></app-header>
+<br>
 
-
-<form (ngSubmit)="updateproduct()" name="updateForm">
+<div class="container">
+<form (ngSubmit)="updateproduct(productdetails[0]._id)" name="updateForm" style="width: 450px">
         <div class="form-group">
             <label class="form-text">Product Name</label>
             <input type="text" value="{{productdetails[0].productName}}" [(ngModel)]="productName" name="productName" class="form-control">
@@ -25,4 +26,6 @@
     
         </div>
     </form>
+    
+</div>
     

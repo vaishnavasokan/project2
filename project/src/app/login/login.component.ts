@@ -30,8 +30,11 @@ export class LoginComponent implements OnInit {
         resultdata => {
 
           resultdata = JSON.parse(JSON.stringify(resultdata))
-          console.log("ithaanu ", resultdata);
+          console.log(resultdata);
           localStorage.setItem('user', JSON.stringify(resultdata))
+          const id= JSON.stringify(JSON.parse(JSON.stringify(resultdata)).data._id)
+          console.log("userrrrrrrrr",id)
+          this.rt.navigateByUrl('/viewproducts');
         
         })
   }

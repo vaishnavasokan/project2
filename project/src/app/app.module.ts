@@ -13,7 +13,8 @@ import {SampleService} from './sample.service';
 import { LoginComponent } from './login/login.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
 import { ViewproductsComponent } from './viewproducts/viewproducts.component';
-import { UpdateproductComponent } from './updateproduct/updateproduct.component'
+import { UpdateproductComponent } from './updateproduct/updateproduct.component';
+import { HeaderComponent } from './header/header.component'
 
 const approutes: Routes = [
   { path: "", component: LoginComponent },
@@ -29,7 +30,8 @@ const approutes: Routes = [
     LoginComponent,
     AddproductComponent,
     ViewproductsComponent,
-    UpdateproductComponent
+    UpdateproductComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

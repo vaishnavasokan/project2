@@ -1,6 +1,10 @@
 
+<app-header></app-header>
+<br>
 
-<form (ngSubmit)="addproduct()" name="productForm">
+<div class="container">
+
+<form (ngSubmit)="addproduct()" name="productForm" style="width: 450px">
     <div class="form-group">
         <label class="form-text">Product Name</label>
         <input type="text" [(ngModel)]="productName" name="productName" class="form-control">
@@ -23,3 +27,5 @@
 
     </div>
 </form>
+    
+</div>
