@@ -14,7 +14,8 @@ import { LoginComponent } from './login/login.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
 import { ViewproductsComponent } from './viewproducts/viewproducts.component';
 import { UpdateproductComponent } from './updateproduct/updateproduct.component';
-import { HeaderComponent } from './header/header.component'
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component'
 
 const approutes: Routes = [
   { path: "", component: LoginComponent },
@@ -31,7 +32,8 @@ const approutes: Routes = [
     AddproductComponent,
     ViewproductsComponent,
     UpdateproductComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
